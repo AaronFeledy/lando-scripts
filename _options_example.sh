@@ -20,7 +20,7 @@ SSH_KEY_FILE='/user/.ssh/id_rsa' #(string)
 SSH_KEY_PW=true #(true,false)
 
 # Remote working directory
-SSH_REM_DIR="/home/$SSH_USER/public_html'" #(string)
+SSH_REM_DIR="/home/$SSH_USER/public_html" #(string)
 
 
 ###
