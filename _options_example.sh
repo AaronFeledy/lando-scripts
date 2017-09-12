@@ -76,7 +76,7 @@ declare -A DRUSH_VARIABLE_SET=(
 
 ### Post-config
 
-POST_CONFIG_COMMANDS=(  # Commands to run prior to running the local-config script.
+POST_CONFIG_COMMANDS=(  # Commands to run after running the local-config script.
   'echo "pre-config one"'  # First command (string)
   'echo "pre-config two"'   # Second command (string)
 )
