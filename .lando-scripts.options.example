@@ -1,6 +1,7 @@
 ## Options file
 ## This file is used for setting options for your scripts.
-## Rename this file to _options.sh and edit options as needed.
+## Copy this file to the parent directory and rename it to 
+## lando-scripts.options.sh then edit as necessary.
 ## ------------------------------------------------------------
 
 ###

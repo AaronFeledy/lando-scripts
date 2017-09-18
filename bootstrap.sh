@@ -7,7 +7,7 @@ SCRIPTPATH="${0%/*}"  # Path of this script
 CWD=$(pwd)            # Current working directory
 
 # Load options
-source $SCRIPTPATH/_options.sh
+source $SCRIPTPATH/../.lando-scripts.options.sh
   
 # Capture ssh key once
 if $SSH_KEY_PW ; then

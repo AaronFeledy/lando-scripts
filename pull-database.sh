@@ -11,7 +11,7 @@ then
 	trap exit ERR
 	
 	# Bootstrap
-  SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/_options.sh
+  SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/bootstrap.sh
 
 	if $DB_REM_SCRIPT ; then
     # Execute tasks on remote server
