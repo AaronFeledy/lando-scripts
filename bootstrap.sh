@@ -11,6 +11,6 @@ source $SCRIPTPATH/../.lando-scripts.options.sh
   
 # Capture ssh key once
 if $SSH_KEY_PW ; then
+  echo $SSH_KEY_FILE
   eval `ssh-agent`
-	ssh-add $SSH_KEY_PATH
 fi
