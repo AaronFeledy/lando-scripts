@@ -1,10 +1,10 @@
 #!/bin/bash
 
+# This script connects to remote servers.
+REMOTE_TASKS=true
+
 read -p "Overwrite your local database? (y/n) " -n 1 -r
 echo
-
-eval `ssh-agent`
-ssh-add
 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then

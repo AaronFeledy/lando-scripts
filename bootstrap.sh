@@ -10,7 +10,7 @@ CWD=$(pwd)            # Current working directory
 source $SCRIPTPATH/../.lando-scripts.options.sh
   
 # Capture ssh key once
-if $SSH_KEY_PW ; then
-  echo $SSH_KEY_FILE
-  eval `ssh-agent`
+if $SSH_KEY_PW && $REMOTE_TASKS ; then
+  eval `ssh-agent` > /dev/null
+  ssh-add $SSH_KEY_FILE
 fi
