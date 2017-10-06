@@ -6,6 +6,7 @@
 
 # Define available scripts
 declare -A LANDO_SCRIPTS=(
+  [ssh]='ssh.sh'
   [pull-db]='pull-database.sh'
 	[local-config]='local-config.sh'
 )
