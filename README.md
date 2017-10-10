@@ -6,20 +6,20 @@ Lando Scripts provides useful scripts for the [Lando](https://docs.devwithlando.
 Each of the following can be performed with a single command:
  * Clone your remote database into your local Lando app.
  * Reconfigure your app for use in the local environment.
- * SSH into your app's remote server
+ * SSH into your app's remote server.
  
 ### Installation
   1. Clone this repository into a directory within your app. (e.g. `myapp/scripts/lando-scripts`)
   2. Copy `.lando-scripts.options.example` into parent directory and rename it o `.lando-scripts.options.sh` (e.g. myapp/scripts/.lando-scripts.options.sh)
   3. Provide your configuration by editing your `.lando-scripts.options.sh` file.
   4. Add the following to your .lando.yml:
-  ```
-  tooling:
-    script:
-      description: Execute a Lando Scripts script.
-      service: appserver
-      cmd: /app/scripts/lando-scripts/script.sh
-  ```
+      ```
+      tooling:
+        script:
+          description: Execute a Lando Scripts script.
+          service: appserver
+          cmd: /app/scripts/lando-scripts/script.sh
+      ```
     
 ### Usage
 Execute Lando Scripts using the new `script` command that is now available to Lando.
