@@ -11,6 +11,9 @@
 # The URL or IP used to connect the remote SSH server.
 SSH_SERVER='server.example.com' #(string)
 
+# The SSH port used to connect to SSH_SERVER
+SSH_PORT=22 #(integer)
+
 # SSH username
 SSH_USER='username' #(string)
 

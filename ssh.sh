@@ -13,4 +13,4 @@ SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/bootstrap.sh
 echo "Connecting to $SSH_USER@$SSH_SERVER..."
 
 # Start SSH connection
-ssh -t $SSH_USER@$SSH_SERVER "cd $SSH_REM_DIR; exec \$SHELL -l"
+ssh -t -p $SSH_PORT $SSH_USER@$SSH_SERVER "cd $SSH_REM_DIR; exec \$SHELL -l"

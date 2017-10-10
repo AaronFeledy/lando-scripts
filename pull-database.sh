@@ -15,13 +15,13 @@ then
 
 	if $DB_REM_SCRIPT ; then
     # Execute tasks on remote server
-    ssh -tt $SSH_USER@$SSH_SERVER "/bin/bash -s -- \"$SSH_REM_DIR\" \"$DB_REM_BACKUP_CMD\"" < $SCRIPTPATH/pull-database-remote.sh
+    ssh -tt -p $SSH_PORT $SSH_USER@$SSH_SERVER "/bin/bash -s -- \"$SSH_REM_DIR\" \"$DB_REM_BACKUP_CMD\"" < $SCRIPTPATH/pull-database-remote.sh
     
     # Download db dump
-    scp $SSH_USER@$SSH_SERVER:$DB_REM_DUMP_FILE.gz .
+    scp -P $SSH_PORT $SSH_USER@$SSH_SERVER:$DB_REM_DUMP_FILE.gz .
     
     # Delete db dump on remote
-    ssh -t $SSH_USER@$SSH_SERVER "rm -fv $DB_REM_DUMP_FILE.gz"
+    ssh -t -p $SSH_PORT $SSH_USER@$SSH_SERVER "rm -fv $DB_REM_DUMP_FILE.gz"
   fi
 	
 	# Import db dump
