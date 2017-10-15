@@ -8,6 +8,7 @@
 declare -A LANDO_SCRIPTS=(
   [ssh]='ssh.sh'
   [pull-db]='pull-database.sh'
+  [pull-files]='pull-files.sh'
   [local-config]='local-config.sh'
 )
 
@@ -43,4 +44,4 @@ while (( "$#" )); do
 done
 
 # Execute Lando Script
-$SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT]}
+$SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT];}
