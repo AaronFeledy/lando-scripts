@@ -67,9 +67,10 @@ DB_REM_BACKUP_CMD="drush sql-dump -v --yes --gzip --structure-tables-list='cache
 
 ### Pre-config
 
-PRE_CONFIG_COMMANDS=(  # Commands to run prior to running the local-config script. (string)
-  'echo "pre-config one"'  # First command (string)
-  'echo "pre-config two"'   # Second command (string)
+PRE_CONFIG_COMMANDS=(  # Commands to run prior to running the local-config script.
+  ## Uncomment the below lines and modify per your needs.
+  #'echo "pre-config one"'  # First command (string)
+  #'echo "pre-config two"'   # Second command (string)
 )
 
 
@@ -83,7 +84,7 @@ DRUSH_ENABLE_MODULES='stage_file_proxy'
 
 # Set Drupal variables. ([variable_name]='value')
 declare -A DRUSH_VARIABLE_SET=(
-	[stage_file_proxy_origin]='http://example.com'
+  [stage_file_proxy_origin]='http://example.com'
   [cache]=0
   [block_cache]=0
   [preprocess_js]=0
@@ -94,6 +95,7 @@ declare -A DRUSH_VARIABLE_SET=(
 ### Post-config
 
 POST_CONFIG_COMMANDS=(  # Commands to run after running the local-config script.
-  'echo "pre-config one"'  # First command (string)
-  'echo "pre-config two"'   # Second command (string)
+  ## Uncomment the below lines and modify per your needs.
+  #'echo "pre-config one"'  # First command (string)
+  #'echo "pre-config two"'   # Second command (string)
 )
