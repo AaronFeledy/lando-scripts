@@ -16,8 +16,12 @@ SCRIPTPATH="${0%/*}";
 
 # Display help message
 function lando-scripts-help {
-  # TODO: display a useful help message
-  echo "HELP!"
+  # List avaialable scripts
+  echo; echo "Usage: lando script <script name>"; echo
+  echo "$(tput setaf 2)Available scripts:$(tput sgr0)"
+  for S in "${!LANDO_SCRIPTS[@]}"; do
+    tput cuf 2; echo $S
+  done
 }
 
 # Parse arguments
@@ -38,10 +42,14 @@ while (( "$#" )); do
       ;;
     *)
       SCRIPT="$1"
+      EXECUTE=true
       shift
       ;;
   esac
 done
 
 # Execute Lando Script
-$SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT];}
+# ...do something interesting...
+if [ "$EXECUTE" = true ] ; then
+  $SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT];}
+fi
