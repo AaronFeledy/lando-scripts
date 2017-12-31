@@ -10,6 +10,7 @@ declare -A LANDO_SCRIPTS=(
   [pull-db]='pull-database.sh'
   [pull-files]='pull-files.sh'
   [local-config]='local-config.sh'
+  [push-lib]='push-libraries.sh'
 )
 
 SCRIPTPATH="${0%/*}";

@@ -28,19 +28,6 @@ SSH_REM_DIR="/home/$SSH_USER/public_html" #(string)
 
 
 ###
-## Files options
-##
-## These options are for specifying asset file directories that should be synced.
-## Files directories contain files that are not considered part of your code base
-## such as images, documents, or other non-code files that are excluded from your
-## code repository.
-###
-
-# The path to your files directory relative to the app root
-FILES_DIR="web/sites/default/files" #(string)
-
-
-###
 ## Remote Database Options
 ###
 
@@ -59,6 +46,24 @@ DB_REM_DUMP_FILE="$DB_REM_DUMP_PATH/$DB_REM_DUMP_NAME" #(string)
 # Bash command to execute on remote server if $DB_REM_SCRIPT is true. Command is executed from $SSH_REM_DIR.
 DB_REM_BACKUP_CMD="drush sql-dump -v --yes --gzip --structure-tables-list='cache,cache_*,history,search_*,sessions,watchdog' --result-file=$DB_REM_DUMP_FILE" #(string)
 
+
+###
+## Untracked files options
+##
+## These options are for specifying asset file or library directories that should
+## be synced. Asset files directories contain files that are not considered part
+## of your code base such as images, documents, or other non-code files that are
+## excluded from your code repository. Library directories contain code that is
+## not tracked in your code repository but may still need to be pushed to the
+## remote server. These might include dependencies installed by Composer.
+###
+
+# The path to your asset files directory relative to the app root.
+FILES_DIR="web/sites/default/files" #(string)
+
+# A space-separated list of paths to directories containing libraries, relative
+# to the app root. Listed directories will be synced recursively.
+LIBRARY_DIRS="vendors web/core web/modules/contrib web/themes/contrib web/libraries" #(string)
 
 
 ###

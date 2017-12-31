@@ -8,6 +8,7 @@ Each of the following can be performed with a single command:
  * Download your remote files into your local Lando app.
  * Reconfigure your app for use in the local environment.
  * SSH into your app's remote server.
+ * Push untracked libraries, such as those installed by Composer, to the remote server.
  
 ### Installation
   1. Clone this repository into a directory within your app. (e.g. `myapp/scripts/lando-scripts`)
