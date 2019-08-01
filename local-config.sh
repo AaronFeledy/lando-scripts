@@ -3,7 +3,7 @@
 echo "Applying local configuration for $LANDO_APP_NAME app..."
 
 # Bootstrap
-SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/common/bootstrap.sh
+SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}"); source $SCRIPTPATH/common/bootstrap.sh
 
 ###
 ## Execute pre-config commands

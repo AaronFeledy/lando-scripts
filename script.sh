@@ -13,7 +13,7 @@ declare -A LANDO_SCRIPTS=(
   [push-lib]='push-libraries.sh'
 )
 
-SCRIPTPATH="${0%/*}";
+SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}");
 
 # Display help message
 function lando-scripts-help {

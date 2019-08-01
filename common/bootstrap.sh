@@ -1,9 +1,9 @@
 # Bootstrap file
 # Bootstraps various scripts by loading options and other functions.
 # ------------------------------------------------------------
-  
+
 # Init variables
-SCRIPTPATH="${0%/*}"  # Path of this script
+SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}")  # Path of this script
 CWD=$(pwd)            # Current working directory
 
 # Load options

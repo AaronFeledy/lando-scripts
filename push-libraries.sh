@@ -9,7 +9,7 @@
 REMOTE_TASKS=true # This script connects to remote servers.
 
 # Bootstrap
-SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/common/bootstrap.sh
+SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}"); source $SCRIPTPATH/common/bootstrap.sh
 
 # Check that required vars are defined.
 if [ -z "$LIBRARY_DIRS" ] 

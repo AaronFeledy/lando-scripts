@@ -8,7 +8,7 @@
 REMOTE_TASKS=true
 
 # Bootstrap
-SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/common/bootstrap.sh
+SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}"); source $SCRIPTPATH/common/bootstrap.sh
 
 echo "Connecting to $SSH_USER@$SSH_SERVER..."
 
