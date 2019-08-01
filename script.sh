@@ -50,7 +50,6 @@ while (( "$#" )); do
 done
 
 # Execute Lando Script
-# ...do something interesting...
 if [ "$EXECUTE" = true ] ; then
-  $SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT];}
+  bash $SCRIPTPATH/${LANDO_SCRIPTS[$SCRIPT]}
 fi
