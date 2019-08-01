@@ -7,7 +7,7 @@
 REMOTE_TASKS=true # This script connects to remote servers.
 
 # Bootstrap
-SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/bootstrap.sh
+SCRIPTPATH="${0%/*}"; source $SCRIPTPATH/common/bootstrap.sh
 
 read -p "Overwrite local files directory? (y/n) " -n 1 -r
 echo
