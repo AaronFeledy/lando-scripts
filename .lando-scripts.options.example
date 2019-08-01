@@ -4,9 +4,6 @@
 ## lando-scripts.options.sh then edit as necessary.
 ## ------------------------------------------------------------
 
-# This script is not meant to be run directly. It should be called by the lando-scripts bootstrap script.
-[ $(basename "$0") != $(basename "$BASH_SOURCE") ] || echo "[ERROR] This script cannot be executed directly." && exit
-
 ###
 ## SSH Options
 ###
