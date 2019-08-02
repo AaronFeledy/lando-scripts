@@ -11,7 +11,7 @@ THIS_DIR=$(dirname "${BASH_SOURCE[0]}") # The directory where this script reside
 # Some useful functions
 tell() { echo "$($TXT_YEL)$*$($TXT_RESET)" >&2; }
 yell() { echo "$($TXT_RED)$(tput bold)$*$($TXT_RESET)" >&2; }
-die() { echo; yell "$*"; echo; exit 111; }
+die() { echo; yell "[Error] $*"; echo; exit 111; }
 try() { "$@" || yell "Cannot $*"; }
 
 # Sources include files
