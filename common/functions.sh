@@ -6,6 +6,12 @@
 ## no need to source this file as it is sourced by init.sh.
 ## ------------------------------------------------------------
 
+# Some useful functions
+tell() { echo "$($TXT_YEL)$*$($TXT_RESET)" >&2; }
+yell() { echo "$($TXT_RED)$(tput bold)$*$($TXT_RESET)" >&2; }
+die() { echo; yell "$*"; echo; exit 111; }
+try() { "$@" || yell "Cannot $*"; }
+
 # Sources a file if it exists.
 # Usage: `source_if_exists /path/to/file`
 source_if_exists() {
