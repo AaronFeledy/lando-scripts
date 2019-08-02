@@ -14,7 +14,8 @@ SSH_SERVER='server.example.com' #(string)
 # The SSH port used to connect to SSH_SERVER
 SSH_PORT=22 #(integer)
 
-# SSH username
+# SSH username.
+# Omit this line if you'd like to be prompted.
 SSH_USER='username' #(string)
 
 # SSH key path. /user represents the home directory for the current user on the host machine.

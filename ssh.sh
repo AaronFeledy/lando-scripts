@@ -4,13 +4,16 @@
 ## This file is used to establish remote SSH connections.
 ## ------------------------------------------------------------
 
-# This script connects to remote servers.
-REMOTE_TASKS=true
-
 # Load common functions and variables
 SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}") && source $SCRIPTPATH/common/init.sh
 
-echo "Connecting to $SSH_USER@$SSH_SERVER..."
+include remote
+
+# We need a remote username to continue
+REMOTE_USER="$(remote_user)"
+[ ! -z "$REMOTE_USER" ] || die "A username is required!"
+
+tell "Connecting to ${REMOTE_USER}@$SSH_SERVER..."
 
 # Start SSH connection
-ssh -t -p $SSH_PORT $SSH_USER@$SSH_SERVER "cd $SSH_REM_DIR; exec \$SHELL -l"
+ssh -t -p $SSH_PORT $REMOTE_USER@$SSH_SERVER "cd $SSH_REM_DIR; exec \$SHELL -l"
