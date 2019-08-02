@@ -6,8 +6,7 @@
 ## scripts within this project. Source this script at the beginning of other
 ## scripts by using:
 ##
-## SCRIPTPATH=$(dirname "${BASH_SOURCE[0]})
-## source $SCRIPTPATH/common/init.sh
+## SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}) && source $SCRIPTPATH/common/init.sh
 ##
 ## ------------------------------------------------------------
 

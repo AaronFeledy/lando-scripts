@@ -10,8 +10,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   trap exit ERR
 
-  # Bootstrap
-  SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}"); source $SCRIPTPATH/common/bootstrap.sh
+  # Load common functions and variables
+  SCRIPTPATH=$(dirname "${BASH_SOURCE[0]}") && source $SCRIPTPATH/common/init.sh
 
   if $DB_REM_SCRIPT ; then
     # Execute tasks on remote server
