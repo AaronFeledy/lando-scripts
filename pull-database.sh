@@ -39,5 +39,5 @@ then
   # Import db dump
   /helpers/mysql-import.sh $DB_REM_DUMP_NAME.gz
 	
-  kill $SSH_AGENT_PID
+  [ -z "$SSH_AGENT_PID" ] || kill $SSH_AGENT_PID
 fi
